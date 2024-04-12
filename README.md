@@ -11,7 +11,7 @@ The web application implements a server-side framework using the powerful JavaSc
 ## Installation
 To install the application, follow these steps:
 
-1. **Clone the repository** to your local machine: ```git clone https://github.com/yourusername/project-name.git```
+1. **Clone the repository** to your local machine: ```https://github.com/clavinorach/fixed-method-point-web.git```
 
 **2. Navigate to the project directory:**
 ```cd project-name```
