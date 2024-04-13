@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Color Setup */
+:root {
+    --primary: #3155e7;
+    --primary-dark: #2045d6;
+    --black: #010101;
+    --gray-1:#788190;
+    --gray-2:#d3d4db;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', 'sans-serif';
+    background-color: var(--body);
+}
+
+/* Setup Components */
+
+/* Button */
+.btn {
+    border-radius: 8px;
+
+}
+
+.btn-primary,
+.btn-outline-secondary {
+    padding: 12px 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-outline-secondary {
+    border: 1px solid var(--gray-2);
+    color: var(--black);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--gray-2);
+    border: 1px solid var(--gray-2);
+    color: var(--black);
+
+}
+
+.btn-outline-secondary:focus {
+    background-color: var(--gray-2);
+    border: 1px solid var(--gray-2);
+    color: var(--black);
+    
+}
+
+/* Navbar */
+.navbar .btn-outline-secondary {
+    border: 1px solid var(--gray);
+    color : var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 10px 16px;
+}
+
+.navbar {
+    padding: 20px 0; 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-nav .nav-link {
+    margin-left: 20px; 
+    color: #000; 
+}
+
+/* Active link style */
+.navbar-nav .nav-link.active {
+    font-weight: bold; 
+    color: #3155e7; 
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+    color: #3155e7; /* Change text color on hover */
+    border-bottom: 2px solid #3155e7; /* Add underline on hover */
+}
+
+
+.nav-link {
+    margin-left: 41px;
+    font-size: 16px;
+    color: var(--gray-1);
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Add transition */
+}
+
+
+/* Active link style */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    font-weight: bold; 
+    color: #3155e7; /* Change text color */
+    border-bottom: 2px solid #3155e7; /* Add underline */
+}
+
+/* Hero Section */
+section.hero {
+    padding:  200px 0;
+}
+
+section.hero .text {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 73px;
+    color: var(--black);
+}
+
+.buttons {
+    padding-top: 69px;
+}
+
+.buttons .btn {
+    font-size : 16px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+
+/* Education Section */
+section.education {
+    padding: 80px 0; 
+}
+
+section.education h2,
+section.education h3,
+section.education p {
+    text-align: center; 
+}
+
+section.education .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+section.education .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section.education h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+section.education h3 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 20px; /* margin bottom for spacing */
+}
+
+/* Add styles for the list */
+section.education ul {
+    padding-left: 0;
+}
+
+section.education ul li {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+section.education ul li a {
+    color: #007bff; /* Link color */
+}
+
+/* Calculator Section */
+section.calculator {
+    padding: 187px 0;
+}
+
+section.calculator .text-calculator {
+    padding: 134px 0;
+}
+
+section.calculator h5 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--black);
+}
+
+section.calculator p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: var(--gray-1);
+    padding-top: 20px;
+}
+
+section.calculator .info-1{
+    padding: 183px 0;
+
+}
+
+section .calculator .card {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+section .calculator .card-body {
+    padding: 2rem;
+}
+
+section .calculator .card-title {
+    font-size: 1.5rem;
+}
+
+section .calculator .form-group label {
+    font-weight: bold;
+}
+
+section .calculator .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+section .calculator .custom-control-label::before {
+    border: 1px solid #007bff;
+}
+
+.calculator .form-group-custom {
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa; /* footer background color */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* flex-wrap to wrap team members on smaller screens */
+}
+
+.team-mem {
+    margin: 20px;
+    text-align: center; 
+}
+
+.footer img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px;
+    object-fit: cover; /* object-fit to maintain aspect ratio */
+    border: 2px solid #fff; /* border for image */
+}
+
+/* Responsive Section */
+
+@media (max-width: 576px) {
+    section.hero, 
+    section.setup,
+    section.calculator {
+        text-align: center;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 240px 0;
+    }
+    .nav-link {
+        margin-left: 0;
+    }
+    /* Hero Section */
+
+    section.hero img {
+        padding-top: 2.5rem;
+    }
+    section.hero .text {
+        font-weight: 500;
+        font-size: 38px;
+        line-height: 53px;
+    }
+    .buttons .btn {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .button .ms-3 {
+        margin-left: 0 !important;
+    }
+
+}

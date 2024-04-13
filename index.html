@@ -1,0 +1,241 @@
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fixed Point Method</title>
+        <link rel="shortcut icon" href="assets/img/brand/favicon.svg" type="image/x-icon">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Math -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    </head>
+    <body>
+        <!-- Navbar section -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#education">Education</a>
+                <a class="nav-link" href="#calculator">Calculator</a>
+                <a class="nav-link me-5" href="#about">About</a>
+                </div>
+                <a href="#calculator" class="btn btn-outline-secondary shadow-sm d-sm d-block">Calculate now !</a>
+            </div>
+            </div>
+        </nav>
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="container">
+                <div class="row">
+                    <!-- Text -->
+                    <div class="col-md-6">
+                        <div class="text">
+                            Calculate Fixed Method Point With This Website More Faster And Easily
+                        </div>
+                        <div class="buttons">
+                            <a href="#calculator" class="btn btn-primary">Calculate now !</a>
+                            <a href="#education" class="btn btn-outline-secondary ms-3">More Info</a>
+                        </div>
+                    </div>
+                    <!-- Image -->
+                    <div class="col-md-6">
+                        <img src="assets/img/hero-math.svg" alt="hero-img" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="education" id="education">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Video Reference Section -->
+                        <h1 class="text-center">What is Fixed-Point Method ?</h1>
+                        <div class="video-container embed-responsive embed-responsive-16by9">
+                            <!-- Replace the iframe with the provided one -->
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/84QsFwVVoGU?si=0AQOBXddshhupuRO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center mt-3">This video provides additional insights into the topic discussed in our blog post.</p>
+                    </div>
+                    <div class="col-md-12 mt-5">
+                        <!-- Sidebar or other content -->
+                        <h3 class="text-center mb-4">Referensi Materi lainnya </h3>
+                        <ul class="list-unstyled">
+                            <li><a href="https://en.wikipedia.org/wiki/Fixed-point_iteration" target="_blank">Fixed-point iteration WIKIPEDIA</a></li>
+                            <li><a href="https://byjus.com/maths/fixed-point-iteration/" target="_blank">Fixed Point Iteration BYJU'S</a></li>
+                            <li><a href="https://math.iitm.ac.in/public_html/sryedida/caimna/transcendental/iteration%20methods/fixed-point/iteration.html" target="_blank">Fixed Point Iteration Method IITM</a></li>
+                            <li><a href="https://youtu.be/OLqdJMjzib8?si=ZQ00FxxYDkcOeXrk" target="_blank">Fixed Point Iteration Oscar Veliz Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Calculator Section-->
+        <section class="calculator" id="calculator">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 py-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="display-5"><i class="fa fa-list"></i> Calculator</h3>
+                                <hr>
+                                <form id="form" method="POST" action="/">
+                                    <div class="form-group form-group-custom">
+                                        <label for="fx">Fungsi f(x)</label>
+                                        <input type="text" class="form-control" name="fx" placeholder="f(x) = " value="x^2 - 2x - 3">
+                                    </div>
+                                    <div class="form-group form-group-custom">
+                                        <label for="gx">Fungsi g(x)</label>
+                                        <input type="text" class="form-control" name="gx" placeholder="g(x) = " value="sqrt(2x+3)">
+                                    </div>
+                                    <div class="form-group form-group-custom">
+                                        <label for="error_limit">Error Limit</label>
+                                        <input type="text" class="form-control" name="error_limit" placeholder="error limit" value="0.000001">
+                                    </div>
+                                    <div class="form-group form-group-custom">
+                                        <label for="nilai_awal">Nilai Awal</label>
+                                        <input type="number" class="form-control" name="nilai_awal" placeholder="nilai awal" value="4">
+                                    </div>
+                                    <div class="form-group form-group-custom">
+                                        <label for="enable_decimal_point"><input type="checkbox" value="true" checked id="enable_decimal_point" name="enable_decimal_point"> Decimal Point</label>
+                                        <input type="number" class="form-control" name="decimal_point" placeholder="nilai awal" value="10" id="decimal_point">
+                                    </div>
+                                    <div class="form-group form-group-custom">
+                                        <button type="button" class="btn btn-lg btn-block btn-primary" onclick="findX()">Find X</button>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 py-2" id="result-section">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="display-5"><i class="fa fa-info"></i> Metode Iterasi Titik Tetap</h3>
+                                <hr>
+                                <p class="justify">
+                                    Metode ini kadang-kadang dinamakan metode iterasi sederhana atau metode langsung atau metode substitusi beruntun. Kesederhanaan metode ini karena pembentukan prosedur iterasinya yang mudah dibentuk, yaitu kita ubah persamaan \( f(x)=0 \) menjadi bentuk \( x=g(x) \), kemudian dibentuk menjadi prosedur iterasi,
+                                    $$ x_{r+1} = g(x_r)$$
+                                    Dan kita terka sebuah nilai awal (tebakan awal) x<sub>0</sub>, lalu dihitung x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>,..., yang diharapkan konvergen ke akar sejati s sedemikian rupa sehingga \( f(s) = 0\) dan \(s = g(s) \)
+                                    <hr>
+                                    Kondisi berhentinya iterasi dinyatakan bila,<br/>
+                                    \( |x_{r+1} - x_r| < \epsilon \)
+                                    <br/>Atau bila menggunakan galat relatif hampiran <br/>
+                                    \( \left|(x_{r+1} - x_r) \over x_{r+1} \right| < \delta \)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <script>
+            function submitForm(callback) {
+                const form = document.getElementById('form');
+                const formData = new FormData(form);
+
+                // Convert enable_decimal_point value to boolean
+                formData.set('enable_decimal_point', formData.get('enable_decimal_point') === 'true');
+
+                fetch('/calculate', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    // Invoke the callback function with the data received from the server
+                    callback(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+
+            function handleFormSubmission(data) {
+                document.getElementById('result').innerHTML = data;
+            }
+            </script>
+        <script>
+        function findX() {
+            $.ajax({
+                type: "POST",
+                url: "/", 
+                data: $("#form").serialize(),
+                success: function(response) {
+                    const hasilIterasiContent = $(response).find('#hasil-iterasi').html();
+                    // Replace the content of the "result-section" with the content of the "hasil-iterasi" card
+                    $("#result-section").html(hasilIterasiContent);
+                    // Initialize Bootstrap collapse 
+                    $('#hasil-iterasi').collapse(); 
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
+                }
+            });
+}
+            </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbarLinks = document.querySelectorAll('.nav-link');
+
+            navbarLinks.forEach(link => {
+                link.addEventListener('mouseover', function(event) {
+                    event.preventDefault(); // Prevent default anchor behavior
+                    const current = document.querySelector('.nav-link.active');
+                    current.classList.remove('active');
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+
+        <script src="app.js"></script>
+        <script src="calculate.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+        <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+        </body>
+
+        <footer class ="footer" id="about">
+            <div class="wrapper">
+                <h2> Our Group</h2>
+                <hr>
+                <div class="members">
+                    <div class="team-mem">
+                        <img src="assets/img/avatar.jpg">
+                        <h4>Clavino Ourizqi Rachmadi</h4>
+                        <p>Website Developer</p>
+                    </div>
+                    <div class="team-mem">
+                        <img src="assets/img/avatar.jpg">
+                        <h4>Nanda Garin Raditya</h4>
+                        <p>Website Developer</p>
+                    </div>
+                    <div class="team-mem">
+                        <img src="assets/img/avatar.jpg">
+                        <h4>Amanda Puspita Sari</h4>
+                        <p>Website Developer</p>
+                    </div>
+                    <div class="team-mem">
+                        <img src="assets/img/avatar.jpg">
+                        <h4>Hilmi Fazli</h4>
+                        <p>Website Developer</p>
+                    </div>
+                </div>
+            </div> 
+        </footer>
+    </html>
