@@ -13,7 +13,7 @@ To install the application, follow these steps:
 
 1. **Clone the repository** to your local machine: ```https://github.com/clavinorach/fixed-method-point-web.git``` 
 
-**2. Install all dependencies by typing on terminal:
+**2. Install all dependencies** by typing on terminal:
 ```npm install```
 
 # Run Project
