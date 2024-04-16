@@ -11,20 +11,10 @@ The web application implements a server-side framework using the powerful JavaSc
 ## Installation
 To install the application, follow these steps:
 
-1. **Clone the repository** to your local machine: ```https://github.com/clavinorach/fixed-method-point-web.git```
+1. **Clone the repository** to your local machine: ```https://github.com/clavinorach/fixed-method-point-web.git``` 
 
-**2. Navigate to the project directory:**
-```cd project-name```
-
-**3. Install Node.js dependencies:**
-```npm init -y```
-
-**4. Install Express body-parser:**
-```npm install express body-parser```
-
-**5. Install mathjs Libraries:**
-```npm install mathjs```
-```npm install string-calc```
+**2. Install all dependencies** by typing on terminal:
+```npm install```
 
 # Run Project
 You can run the website code by typing on terminal:
