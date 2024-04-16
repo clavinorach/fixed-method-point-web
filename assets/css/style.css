@@ -112,7 +112,7 @@ body {
 
 /* Hero Section */
 section.hero {
-    padding:  200px 0;
+    padding:  180px 0;
 }
 
 section.hero .text {
@@ -248,14 +248,14 @@ section.calculator .text-calculator {
     padding: 134px 0;
 }
 
-section.calculator h5 {
+section.calculator .h5 {
     font-size: 42px;
     font-weight: 700;
     line-height: 48px;
     color: var(--black);
 }
 
-section.calculator p {
+section.calculator .p {
     font-size: 18px;
     font-weight: 300;
     line-height: 28px;
@@ -314,7 +314,7 @@ section .calculator .custom-control-label::before {
     text-align: center; 
 }
 
-.footer img {
+.footer .footer-img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -328,34 +328,93 @@ section .calculator .custom-control-label::before {
 @media (max-width: 576px) {
     section.hero, 
     section.setup,
-    section.calculator {
+    section.calculator {    
         text-align: center;
     }
 
-    /* Navbar */
-    .navbar {
-        padding: 240px 0;
-    }
-    .nav-link {
-        margin-left: 0;
-    }
-    /* Hero Section */
-
-    section.hero img {
-        padding-top: 2.5rem;
-    }
-    section.hero .text {
-        font-weight: 500;
-        font-size: 38px;
-        line-height: 53px;
-    }
     .buttons .btn {
         display: block;
         margin: 1rem 0;
     }
 
-    .button .ms-3 {
+    .buttons .ms-3 {
         margin-left: 0 !important;
     }
 
+    /* Education section */
+    section.education {
+        padding: 50px;
+    }
+
+    section.education .related-content {
+        padding: 20px; /* Decrease padding */
+    }
+
+    section.education .post-box {
+        padding: 10px; /* Decrease padding */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    section.education .post-img {
+        height: 200px; /* Decrease height */
+    }
+
+    section.education .post-title {
+        padding: 10px; /* Decrease padding */
+        font-size: 1.1rem; /* Decrease font size */
+    }
+
+    section.education .post-description {
+        font-size: 0.8rem; /* Decrease font size */
+        margin: 3px 0 5px; /* Adjust margin */
+    }
+
+    /* Footer Section */
+
+    .footer {
+        padding: 30px 0; /* Decrease padding */
+    }
+
+    .members {
+        justify-content: center;
+    }
+
+    .team-mem {
+        margin: 10px; /* Decrease margin */
+    }
+
+    .footer .img {
+        width: 80px; /* Decrease image width */
+        height: 80px; /* Decrease image height */
+        max-width: 100%; /* Set maximum width */
+        max-height: 100%; /* Set maximum height */
+        margin: 10px; /* Decrease margin */
+        border-radius: 50%; /* Ensure circular shape */
+    }
+
+    /* X-Large devices (large desktops, 1200px and up) */
+    @media (max-width: 1200px) {
+        .hero {
+            padding: 120px 0; /* Decrease padding */
+        }
+    
+        .hero .text {
+            font-size: 36px; /* Decrease font size */
+            line-height: 60px; /* Adjust line height */
+        }
+    
+        .hero .buttons {
+            padding-top: 50px; /* Decrease padding */
+        }
+    
+        .hero .buttons .btn {
+            font-size: 14px; /* Decrease font size */
+            line-height: 20px; /* Adjust line height */
+        }
+    
+        .hero img {
+            display: none; /* Hide image on smaller screens */
+        }
+
+    } 
 }
