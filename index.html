@@ -63,20 +63,43 @@
                         <!-- Video Reference Section -->
                         <h1 class="text-center">What is Fixed-Point Method ?</h1>
                         <div class="video-container embed-responsive embed-responsive-16by9">
-                            <!-- Replace the iframe with the provided one -->
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/84QsFwVVoGU?si=0AQOBXddshhupuRO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <p class="text-center mt-3">This video provides additional insights into the topic discussed in our blog post.</p>
                     </div>
-                    <div class="col-md-12 mt-5">
-                        <!-- Sidebar or other content -->
-                        <h3 class="text-center mb-4">Referensi Materi lainnya </h3>
-                        <ul class="list-unstyled">
-                            <li><a href="https://en.wikipedia.org/wiki/Fixed-point_iteration" target="_blank">Fixed-point iteration WIKIPEDIA</a></li>
-                            <li><a href="https://byjus.com/maths/fixed-point-iteration/" target="_blank">Fixed Point Iteration BYJU'S</a></li>
-                            <li><a href="https://math.iitm.ac.in/public_html/sryedida/caimna/transcendental/iteration%20methods/fixed-point/iteration.html" target="_blank">Fixed Point Iteration Method IITM</a></li>
-                            <li><a href="https://youtu.be/OLqdJMjzib8?si=ZQ00FxxYDkcOeXrk" target="_blank">Fixed Point Iteration Oscar Veliz Youtube</a></li>
-                        </ul>
+
+                    <!-- Related Content -->
+                    <div class="related-content">
+                        <h2 style="text-align:left">Other Materials : </h2>
+                    </div>
+
+                    <div class="post-box">
+                        <img src="/assets/img/math-formula-svgrepo-com.svg" alt="" class="post-img">
+                        
+                        <a href="#" class="post-title"> Advanced Fixed Point Method Techniques </a>
+                        <p class="post-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nostrum!</p>
+                    </div>
+        
+                    <!-- Additional Related Content Boxes -->
+                    <div class="post-box">
+                        <img src="/assets/img/math-formula-svgrepo-com.svg" alt="" class="post-img">
+                        
+                        <a href="#" class="post-title"> Advanced Fixed Point Method Techniques </a>
+                        <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at!</p>
+                    </div>
+        
+                    <div class="post-box">
+                        <img src="/assets/img/math-formula-svgrepo-com.svg" alt="" class="post-img">
+                        
+                        <a href="#" class="post-title"> Advanced Fixed Point Method Techniques </a>
+                        <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, autem!</p>
+                    </div>
+        
+                    <div class="post-box">
+                        <img src="/assets/img/math-formula-svgrepo-com.svg" alt="" class="post-img">
+                        
+                        <a href="#" class="post-title"> Advanced Fixed Point Method Techniques </a>
+                        <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, ex!</p>
                     </div>
                 </div>
             </div>
@@ -155,7 +178,6 @@
                 })
                 .then(response => response.text())
                 .then(data => {
-                    // Invoke the callback function with the data received from the server
                     callback(data);
                 })
                 .catch(error => {

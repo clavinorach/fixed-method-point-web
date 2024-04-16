@@ -187,6 +187,58 @@ section.education ul li a {
     color: #007bff; /* Link color */
 }
 
+/* CSS for post box in education section */
+
+section.education .related-content{
+    padding: 40px;
+} 
+
+section.education .post-box {
+    background: var(--white);
+    box-shadow: 0 4px 14px hsl(355deg 25% / 10%);
+    padding: 15px;
+    border-radius: 0.5rem;
+    flex: 1; /* Ensure each post-box takes equal space */
+    margin: 0 5px; /* Add some space between each post-box */
+}
+
+section.education .post-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+section.education .post-title {
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--black);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+section.education .post-description {
+    text-align:left;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* CSS for flex container */
+section.education .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of post-box elements */
+    justify-content: center; /* Center align post-box elements */
+}
+
+
 /* Calculator Section */
 section.calculator {
     padding: 187px 0;
