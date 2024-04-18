@@ -59,7 +59,7 @@ body {
 /* Navbar */
 .navbar .btn-outline-secondary {
     border: 1px solid var(--gray);
-    color : var(--black);
+    color: var(--black);
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -67,30 +67,34 @@ body {
 }
 
 .navbar {
-    padding: 20px 0; 
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
-    background-color: #fff; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-nav .nav-link {
-    margin-left: 20px; 
-    color: #000; 
+    margin-left: 41px; /* Adjusted margin */
+    font-size: 16px;
+    color: var(--gray-1);
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 /* Active link style */
-.navbar-nav .nav-link.active {
-    font-weight: bold; 
-    color: #3155e7; 
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    color: #3155e7;
+    border-bottom: 2px solid #3155e7;
 }
 
 /* Hover effect */
-.navbar-nav .nav-link:hover {
-    color: #3155e7; /* Change text color on hover */
-    border-bottom: 2px solid #3155e7; /* Add underline on hover */
+.navbar-nav .nav-link:not(.active):hover {
+    color: #3155e7;
+    border-bottom: 2px solid #3155e7;
 }
 
 
@@ -98,7 +102,7 @@ body {
     margin-left: 41px;
     font-size: 16px;
     color: var(--gray-1);
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* Add transition */
+    transition: color 0.3s ease, border-bottom 0.3s ease; 
 }
 
 
@@ -106,13 +110,24 @@ body {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
     font-weight: bold; 
-    color: #3155e7; /* Change text color */
-    border-bottom: 2px solid #3155e7; /* Add underline */
+    color: #3155e7; 
+    border-bottom: 2px solid #3155e7; 
+}
+
+.navbar-nav .nav-link.active-scroll {
+    font-weight: bold;
+    color: #3155e7;
+    border-bottom: 2px solid #3155e7;
+}
+
+.nav-link.hover:hover {
+    color: #000;
+    border-bottom: none;
 }
 
 /* Hero Section */
 section.hero {
-    padding:  180px 0;
+    padding:  170px 0;
 }
 
 section.hero .text {
@@ -120,6 +135,11 @@ section.hero .text {
     font-size: 40px;
     line-height: 73px;
     color: var(--black);
+}
+
+section.hero .hero-img {
+    max-width: 100%;
+    height: auto;
 }
 
 .buttons {
@@ -146,7 +166,7 @@ section.education p {
 
 section.education .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
 }
@@ -169,7 +189,7 @@ section.education h3 {
     font-size: 20px;
     font-weight: bold;
     line-height: 1.5;
-    margin-bottom: 20px; /* margin bottom for spacing */
+    margin-bottom: 20px; 
 }
 
 /* Add styles for the list */
@@ -184,64 +204,69 @@ section.education ul li {
 }
 
 section.education ul li a {
-    color: #007bff; /* Link color */
+    color: #007bff; 
 }
 
 /* CSS for post box in education section */
 
-section.education .related-content{
+section.education .related-content {
     padding: 40px;
-} 
+    border-bottom: 1px solid #2045d6; 
+    margin-bottom: 20px; 
+  }
 
-section.education .post-box {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  section.education .post-box {
     background: var(--white);
     box-shadow: 0 4px 14px hsl(355deg 25% / 10%);
-    padding: 15px;
+    padding: 20px;
     border-radius: 0.5rem;
-    flex: 1; /* Ensure each post-box takes equal space */
-    margin: 0 5px; /* Add some space between each post-box */
-}
+    flex: 1; 
+    margin: 0 10px 20px; 
+    border: 1px solid #ddd; 
+  }
 
-section.education .post-img {
+  section.education .post-img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-radius: 0.5rem;
-}
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
 
-section.education .post-title {
-    padding: 20px;
+  section.education .post-title {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--black);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
+    color: var(--primary);
+    margin-top: 15px; 
+    transition: color 0.3s ease;
+  }
 
-section.education .post-description {
-    text-align:left;
-    font-size: 0.9rem;
+  section.education .post-title:hover {
+    color: var(--primary);
+  }
+
+  section.education .post-description {
+    font-size: 1.1rem;
     line-height: 1.5rem;
-    margin: 5px 0 10px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
+    margin-top: 10px; 
+  }
 
-/* CSS for flex container */
-section.education .container {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping of post-box elements */
-    justify-content: center; /* Center align post-box elements */
+  /* Hover effect */
+section.education .post-box:hover {
+    box-shadow: 0 8px 20px hsl(355deg 25% / 20%);
+    transition: box-shadow 0.3s ease;
 }
 
 
 /* Calculator Section */
 section.calculator {
-    padding: 187px 0;
+    padding: 177px 0;
 }
 
 section.calculator .text-calculator {
@@ -298,7 +323,7 @@ section .calculator .custom-control-label::before {
 
 /* Footer */
 .footer {
-    background-color: #f8f9fa; /* footer background color */
+    background-color: var(--gray-1); /* footer background color */
     padding: 50px 0;
     text-align: center;
 }
@@ -306,7 +331,7 @@ section .calculator .custom-control-label::before {
 .members {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* flex-wrap to wrap team members on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .team-mem {
@@ -319,8 +344,8 @@ section .calculator .custom-control-label::before {
     height: 100px;
     border-radius: 50%;
     margin: 20px;
-    object-fit: cover; /* object-fit to maintain aspect ratio */
-    border: 2px solid #fff; /* border for image */
+    object-fit: cover; 
+    border: 2px solid #fff; 
 }
 
 /* Responsive Section */
@@ -341,38 +366,11 @@ section .calculator .custom-control-label::before {
         margin-left: 0 !important;
     }
 
-    /* Education section */
-    section.education {
-        padding: 50px;
-    }
-
-    section.education .related-content {
-        padding: 20px; /* Decrease padding */
-    }
-
-    section.education .post-box {
-        padding: 10px; /* Decrease padding */
-        margin: 10px 0; /* Adjust margin */
-    }
-
-    section.education .post-img {
-        height: 200px; /* Decrease height */
-    }
-
-    section.education .post-title {
-        padding: 10px; /* Decrease padding */
-        font-size: 1.1rem; /* Decrease font size */
-    }
-
-    section.education .post-description {
-        font-size: 0.8rem; /* Decrease font size */
-        margin: 3px 0 5px; /* Adjust margin */
-    }
 
     /* Footer Section */
 
     .footer {
-        padding: 30px 0; /* Decrease padding */
+        padding: 30px 0;
     }
 
     .members {
@@ -380,41 +378,45 @@ section .calculator .custom-control-label::before {
     }
 
     .team-mem {
-        margin: 10px; /* Decrease margin */
+        margin: 10px; 
     }
 
     .footer .img {
-        width: 80px; /* Decrease image width */
-        height: 80px; /* Decrease image height */
-        max-width: 100%; /* Set maximum width */
-        max-height: 100%; /* Set maximum height */
-        margin: 10px; /* Decrease margin */
-        border-radius: 50%; /* Ensure circular shape */
+        width: 80px; 
+        height: 80px; 
+        max-width: 100%; 
+        max-height: 100%; 
+        margin: 10px; 
+        border-radius: 50%; 
+    }
+
+    @media (min-width: 992px) {
+        .hero .col-md-6 {
+            display: flex;
+            align-items: flex-start;
+        }
     }
 
     /* X-Large devices (large desktops, 1200px and up) */
     @media (max-width: 1200px) {
         .hero {
-            padding: 120px 0; /* Decrease padding */
+            padding: 120px 0; 
         }
     
         .hero .text {
-            font-size: 36px; /* Decrease font size */
-            line-height: 60px; /* Adjust line height */
+            font-size: 36px; 
+            line-height: 60px;
         }
     
         .hero .buttons {
-            padding-top: 50px; /* Decrease padding */
+            padding-top: 50px; 
         }
     
         .hero .buttons .btn {
-            font-size: 14px; /* Decrease font size */
-            line-height: 20px; /* Adjust line height */
+            font-size: 14px; 
+            line-height: 20px; 
         }
     
-        .hero img {
-            display: none; /* Hide image on smaller screens */
-        }
-
+        
     } 
 }
