@@ -137,8 +137,8 @@ section.hero .text {
     color: var(--black);
 }
 
-section.hero .hero-img {
-    max-width: 100%;
+section.hero img.w-100 {
+    max-width: 88%;
     height: auto;
 }
 
@@ -247,6 +247,7 @@ section.education .related-content {
     transition: color 0.3s ease;
   }
 
+
   section.education .post-title:hover {
     color: var(--primary);
   }
@@ -350,7 +351,7 @@ section .calculator .custom-control-label::before {
 
 /* Responsive Section */
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     section.hero, 
     section.setup,
     section.calculator {    
@@ -365,6 +366,19 @@ section .calculator .custom-control-label::before {
     .buttons .ms-3 {
         margin-left: 0 !important;
     }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px; 
+    }
+
+    section.education .related-content {
+        padding: 20px; /* Decrease padding for smaller screens */
+        border-bottom: 1px solid #2045d6; 
+        margin-bottom: 20px; 
+    }
+
+    
 
 
     /* Footer Section */
